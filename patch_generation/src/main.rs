@@ -1,47 +1,51 @@
-
 use cgmath::{Vector3, Vector4};
 
 use embree;
 use image;
+use tobj;
 
-const N: u32 = 64;
+const N: u32 = 256;
 
 fn main() {
     let device = embree::Device::new();
 
     let mut scene = embree::Scene::new(&device);
 
-    let mut tris = embree::TriangleMesh::unanimated(&device, 2, 4);
-    {
-        let mut verts = tris.vertex_buffer.map();
-        let mut inds = tris.index_buffer.map();
+    let mut opt = tobj::LoadOptions::default();
+    opt.triangulate = true;
+    let (models, _) = tobj::load_obj(
+        "/home/lowin/Documents/assets/common-3d-test-models/data/stanford-bunny.obj",
+        &opt,
+    )
+    .unwrap();
 
-        verts[0] = Vector4::new(-1.0, -1.0, -5.0, 0.0);
-        verts[1] = Vector4::new(-0.5, 1.0, -5.0, 0.0);
-        verts[2] = Vector4::new(0.5, 1.0, -3.0, 0.0);
-        verts[3] = Vector4::new(1.0, -1.0, -3.0, 0.0);
+    println!("nb models: {}", models.len());
 
-        inds[0] = Vector3::new(0, 1, 2);
-        inds[1] = Vector3::new(0, 2, 3);
+    let model = &models[0];
+    let mut tris = embree::TriangleMesh::unanimated(
+        &device,
+        model.mesh.indices.len() / 3,
+        model.mesh.positions.len() / 3,
+    );
+
+    let mut verts = tris.vertex_buffer.map();
+    let mut inds = tris.index_buffer.map();
+
+    for i in 0..(model.mesh.positions.len() / 3) {
+        let idx = i * 3;
+        let p = &model.mesh.positions;
+        verts[i] = Vector4::new(p[idx], p[idx + 1], p[idx + 2], 0.0);
     }
-    {
-        let verts = tris.vertex_buffer.map();
-        let inds = tris.index_buffer.map();
 
-        for i in 0..verts.len() {
-            let v = verts[i];
-            println!("v = {} {} {} {}", v.x, v.y, v.z, v.w);
-        }
-
-        for i in 0..inds.len() {
-            let idx = inds[i];
-            println!("idx = {} {} {}", idx.x, idx.y, idx.z);
-        }
+    for i in 0..(model.mesh.indices.len() / 3) {
+        let idx = i * 3;
+        let j = &model.mesh.indices;
+        inds[i] = Vector3::new(j[idx], j[idx + 1], j[idx + 2]);
     }
+
 
     let mut geom = embree::Geometry::Triangle(tris);
     geom.commit();
-    
 
     scene.attach_geometry(geom);
     let scene = scene.commit();
@@ -52,8 +56,8 @@ fn main() {
     let vp_w = 2.0;
     let vp_h = 2.0;
     let focal_length = (vp_w / 2.0) / f32::tan(fov);
-    
-    let origin = Vector3::new(0.0, 0.0, 0.0);
+
+    let origin = Vector3::new(0.0, 0.1, 0.2);
     let view_dir = Vector3::new(0.0, 0.0, -1.0);
     let right = Vector3::new(1.0, 0.0, 0.0) * vp_w;
     let up = Vector3::new(0.0, 1.0, 0.0) * vp_h;
@@ -78,7 +82,7 @@ fn main() {
                 let mut pixel = img.get_pixel_mut(i, N - j - 1);
 
                 // Need a solution to replace 6.0 by something general.
-                let depth = ray_hit.ray.tfar / 6.0;
+                let depth = ray_hit.ray.tfar / 1.0;
 
                 pixel.0 = [(depth * 255.0) as u8];
             } else {
