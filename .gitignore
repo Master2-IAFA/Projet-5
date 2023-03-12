@@ -31,5 +31,4 @@
 *.out
 *.app
 
-# patch generation
-patch_generation/target
+__pycache__/
