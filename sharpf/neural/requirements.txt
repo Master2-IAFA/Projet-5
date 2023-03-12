@@ -100,7 +100,7 @@ test-tube==0.7.5
 testpath==0.4.4
 threadpoolctl==2.1.0
 timm==0.3.2
-torch==1.6.0
+torch==1.13.1
 torchvision==0.7.0
 tornado==6.1
 tqdm==4.54.1
