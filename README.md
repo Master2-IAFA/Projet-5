@@ -8,11 +8,11 @@ https://www.mediafire.com/file/1lolinn1ehfxcl4/abc_test_3_4.hdf5/file
 # Docker
 
 ```
-sudo ./docker/build_docker.sh
+bash docker/build_docker.sh
 ```
 
 ```
-sudo docker run --rm -it --name 3ddl.artonson.0.sharp_features -v {ton_path}/def:/code/ -p 8888:8888 artonson/sharp_features:latest
+./docker/run_docker.sh -d data -l outputs -p 8888 -u
 ```
 
 ### Jupyter in Docker 
