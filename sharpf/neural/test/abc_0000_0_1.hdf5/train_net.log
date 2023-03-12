@@ -1,0 +1,16 @@
+[2023-01-24 23:57:44,969][__main__][INFO] - Current working directory: /code/sharpf/neural/test/abc_0000_0_1.hdf5
+[2023-01-24 23:57:46,440][defs.modeling.system.def_image_regression][INFO] - The predictions will be saved in /code/sharpf/neural/test/abc_0000_0_1.hdf5/predictions
+[2023-01-24 23:57:46,444][lightning][INFO] - GPU available: False, used: False
+[2023-01-24 23:57:46,445][lightning][INFO] - TPU available: None, using: 0 TPU cores
+[2023-01-24 23:57:51,762][__main__][INFO] - Loaded weights successfully!
+[2023-01-24 23:57:52,456][defs.data.build][INFO] - Dataset (test) contains 18 elements
+[2023-01-25 00:24:16,055][__main__][INFO] - Current working directory: /code/sharpf/neural/test/abc_0000_0_1.hdf5
+[2023-01-25 00:24:17,550][defs.modeling.system.def_image_regression][INFO] - The predictions will be saved in /code/sharpf/neural/test/abc_0000_0_1.hdf5/predictions
+[2023-01-25 00:24:17,669][lightning][INFO] - GPU available: False, used: False
+[2023-01-25 00:24:17,669][lightning][INFO] - TPU available: None, using: 0 TPU cores
+[2023-01-25 00:24:22,866][__main__][INFO] - Loaded weights successfully!
+[2023-01-25 00:24:23,459][defs.data.build][INFO] - Dataset (test) contains 4 elements
+[2023-01-25 00:27:07,243][__main__][INFO] - Test is ended for: /code/sharpf/neural/test/abc_0000_0_1.hdf5
+
+
+

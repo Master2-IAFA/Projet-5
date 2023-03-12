@@ -1,0 +1,8 @@
+- datasets.path=/code/data/20201113_castle_45.hdf5
+- callbacks=regression
+- datasets=unlabeled-image
+- model=unet2d-hist
+- transform=depth-sl-regression-arbitrary
+- system=def-image-regression
+- eval_only=true
+- test_weights=/code/pretrained_models/def-image-arbitrary-regression-high-0.ckpt

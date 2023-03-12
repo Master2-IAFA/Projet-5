@@ -1,0 +1,26 @@
+[2023-01-25 14:06:52,276][__main__][INFO] - Current working directory: /code/sharpf/neural/test/abc_test0
+[2023-01-25 14:06:53,310][defs.modeling.system.def_image_regression][INFO] - The predictions will be saved in /code/sharpf/neural/test/abc_test0/predictions
+[2023-01-25 14:06:53,314][lightning][INFO] - GPU available: False, used: False
+[2023-01-25 14:06:53,314][lightning][INFO] - TPU available: None, using: 0 TPU cores
+[2023-01-25 14:07:10,432][__main__][INFO] - Current working directory: /code/sharpf/neural/test/abc_test0
+[2023-01-25 14:07:11,507][defs.modeling.system.def_image_regression][INFO] - The predictions will be saved in /code/sharpf/neural/test/abc_test0/predictions
+[2023-01-25 14:07:11,510][lightning][INFO] - GPU available: False, used: False
+[2023-01-25 14:07:11,510][lightning][INFO] - TPU available: None, using: 0 TPU cores
+[2023-01-25 14:07:31,924][__main__][INFO] - Loaded weights successfully!
+[2023-01-25 14:07:32,666][defs.data.build][INFO] - Dataset (test) contains 18 elements
+[2023-01-25 14:08:18,262][__main__][INFO] - Current working directory: /code/sharpf/neural/test/abc_test0
+[2023-01-25 14:08:19,318][defs.modeling.system.def_image_regression][INFO] - The predictions will be saved in /code/sharpf/neural/test/abc_test0/predictions
+[2023-01-25 14:08:19,322][lightning][INFO] - GPU available: False, used: False
+[2023-01-25 14:08:19,322][lightning][INFO] - TPU available: None, using: 0 TPU cores
+[2023-01-25 14:08:19,571][__main__][INFO] - Loaded weights successfully!
+[2023-01-25 14:08:20,303][defs.data.build][INFO] - Dataset (test) contains 4 elements
+[2023-01-25 15:21:38,061][__main__][INFO] - Current working directory: /code/sharpf/neural/test/abc_test0
+[2023-01-25 15:21:39,855][defs.modeling.system.def_image_regression][INFO] - The predictions will be saved in /code/sharpf/neural/test/abc_test0/predictions
+[2023-01-25 15:21:39,861][lightning][INFO] - GPU available: False, used: False
+[2023-01-25 15:21:39,861][lightning][INFO] - TPU available: None, using: 0 TPU cores
+[2023-01-25 15:21:40,286][__main__][INFO] - Loaded weights successfully!
+[2023-01-25 15:21:40,942][defs.data.build][INFO] - Dataset (test) contains 4 elements
+[2023-01-25 15:22:03,773][__main__][INFO] - Test is ended for: /code/sharpf/neural/test/abc_test0
+
+
+

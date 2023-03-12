@@ -1,0 +1,20 @@
+[2023-01-24 14:43:12,944][__main__][INFO] - Current working directory: /code/sharpf/neural/test/20201113_castle_45
+[2023-01-24 14:43:13,890][defs.modeling.system.def_image_regression][INFO] - The predictions will be saved in /code/sharpf/neural/test/20201113_castle_45/predictions
+[2023-01-24 14:43:30,455][__main__][INFO] - Current working directory: /code/sharpf/neural/test/20201113_castle_45
+[2023-01-24 14:43:31,380][defs.modeling.system.def_image_regression][INFO] - The predictions will be saved in /code/sharpf/neural/test/20201113_castle_45/predictions
+[2023-01-24 14:43:31,383][lightning][INFO] - GPU available: False, used: False
+[2023-01-24 14:43:31,384][lightning][INFO] - TPU available: None, using: 0 TPU cores
+[2023-01-24 14:43:31,650][__main__][INFO] - Loaded weights successfully!
+[2023-01-24 14:43:32,008][defs.data.build][INFO] - Dataset (test) contains 18 elements
+[2023-01-24 23:52:13,667][__main__][INFO] - Current working directory: /code/sharpf/neural/test/20201113_castle_45
+[2023-01-24 23:52:14,741][defs.modeling.system.def_image_regression][INFO] - The predictions will be saved in /code/sharpf/neural/test/20201113_castle_45/predictions
+[2023-01-24 23:53:08,619][__main__][INFO] - Current working directory: /code/sharpf/neural/test/20201113_castle_45
+[2023-01-24 23:53:09,663][defs.modeling.system.def_image_regression][INFO] - The predictions will be saved in /code/sharpf/neural/test/20201113_castle_45/predictions
+[2023-01-24 23:53:09,667][lightning][INFO] - GPU available: False, used: False
+[2023-01-24 23:53:09,667][lightning][INFO] - TPU available: None, using: 0 TPU cores
+[2023-01-24 23:53:15,319][__main__][INFO] - Loaded weights successfully!
+[2023-01-24 23:53:15,745][defs.data.build][INFO] - Dataset (test) contains 12 elements
+[2023-01-24 23:54:15,276][__main__][INFO] - Test is ended for: /code/sharpf/neural/test/20201113_castle_45
+
+
+

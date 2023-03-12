@@ -30,7 +30,8 @@ RUN apt-get clean \
     libmpfr-dev \
     libboost-dev \
     libboost-thread-dev \
-    libtbb-dev
+    libtbb-dev \
+    parallel
 
 RUN wget https://github.com/Kitware/CMake/releases/download/v3.17.4/cmake-3.17.4-Linux-x86_64.sh \
  && sh cmake-3.17.4-Linux-x86_64.sh --skip-license --prefix=/usr
@@ -46,7 +47,7 @@ ENV HOME=/home/user
 RUN chmod 777 /home/user
 
 ## Download and install miniconda
-RUN wget https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-Linux-x86_64.sh -O ~/miniconda.sh \
+RUN wget https://repo.continuum.io/miniconda/Miniconda3-4.6.14-Linux-x86_64.sh -O ~/miniconda.sh \
  && chmod +x ~/miniconda.sh \
  && ~/miniconda.sh -b -p ~/miniconda \
  && rm ~/miniconda.sh \
@@ -85,7 +86,7 @@ ENV DYLD_LIBRARY_PATH=/usr/local/cuda/lib:$DYLD_LIBRARY_PATH
 # Install geometry-related packages
 RUN conda install -c conda-forge \
     igl=0.4.1 \
-    point_cloud_utils \
+    point_cloud_utils=0.15.1 \
     libspatialindex=1.9.3 \
     pyembree=0.1.6
 
