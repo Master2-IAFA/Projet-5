@@ -1,0 +1,9 @@
+- trainer.gpus=0
+- datasets.path=/home/mafo/dev/Projet-5/outputs/abc_0000_0_1.hdf5
+- callbacks=regression
+- datasets=unlabeled-image
+- model=unet2d-hist
+- transform=depth-sl-regression-arbitrary
+- system=def-image-regression
+- eval_only=true
+- test_weights=/home/mafo/dev/def/pretrained_models/def-image-arbitrary-regression-high-0.ckpt

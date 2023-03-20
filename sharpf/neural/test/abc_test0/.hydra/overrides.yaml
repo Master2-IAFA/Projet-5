@@ -1,8 +1,0 @@
-- datasets.path=/code/outputs/abc_0000_0_1.hdf5
-- callbacks=regression
-- datasets=unlabeled-image
-- model=unet2d-hist
-- transform=depth-sl-regression-arbitrary
-- system=def-image-regression
-- eval_only=true
-- test_weights=/code/pretrained_models/def-image-arbitrary-regression-high-0.ckpt
