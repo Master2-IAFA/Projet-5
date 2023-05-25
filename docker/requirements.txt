@@ -75,7 +75,7 @@ threadpoolctl==2.1.0
 tifffile==2020.9.3
 torch==1.2.0
 torchvision==0.4.0a0+9232c4a
-tornado==6.0.4
+tornado==6.3.2
 tqdm==4.51.0
 traitlets==4.3.3
 traittypes==0.2.1
